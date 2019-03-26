@@ -12,4 +12,6 @@ set clipboard=unnamed
 set laststatus=2
 set mouse=a
 set backspace=2
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
