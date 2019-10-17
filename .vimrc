@@ -14,4 +14,9 @@ set mouse=a
 set backspace=2
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+highlight ColorColumn ctermbg=red
+set colorcolumn=80
+noremap :W :w
+noremap :Wq :wq
 
+colorscheme desert
