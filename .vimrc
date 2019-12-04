@@ -7,16 +7,19 @@ set ai
 set number
 set hlsearch
 set ruler
-highlight Comment ctermfg=green
+
 set clipboard=unnamed
 set laststatus=2
 set mouse=a
 set backspace=2
+
+colorscheme desert
+
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 highlight ColorColumn ctermbg=red
 set colorcolumn=80
+
 noremap :W :w
 noremap :Wq :wq
 
-colorscheme desert
