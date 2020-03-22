@@ -1,0 +1,24 @@
+Host prime
+  Hostname comma-562a3fbaeff60c94
+  Port 22
+  IdentityFile ~/.ssh/id_rsa
+  ProxyCommand ssh %h@ssh.comma.ai -W %h:%p
+
+Host comma-*
+  Port 22
+  IdentityFile ~/.ssh/id_rsa
+  ProxyCommand ssh %h@ssh.comma.ai -W %h:%p
+
+Host ssh.comma.ai
+  Hostname ssh.comma.ai
+  Port 22
+  IdentityFile ~/.ssh/id_rsa
+
+
+Host phone
+  Hostname 192.168.86.57
+  User root
+  Port 8022
+  IdentityFile ~/.ssh/id_rsa
+
+
