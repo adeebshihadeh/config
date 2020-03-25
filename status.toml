@@ -1,0 +1,26 @@
+theme = "plain"
+icons = "awesome"
+
+[[block]]
+block = "music"
+buttons = ["play", "next"]
+max_width = 45
+
+[[block]]
+block = "sound"
+step_width = 3
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{Mup}%"
+format_swap = "{SUp}%"
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "time"
+interval = 60
+format = "%a %m/%d %R"

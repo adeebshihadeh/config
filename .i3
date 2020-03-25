@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -151,13 +151,26 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
-
-
+#bar {
+#        status_command i3status
+#}
 
 # my stuff
+
+bar {
+    font pango:DejaVu Sans Mono, FontAwesome 12
+    position top
+    status_command /usr/bin/i3status-rs ~/.config/i3/status.toml
+    colors {
+        separator #666666
+        background #222222
+        statusline #dddddd
+        focused_workspace #0088CC #0088CC #ffffff
+        active_workspace #333333 #333333 #ffffff
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #2f343a #900000 #ffffff
+    }
+}
 
 # set up 2nd monitor
 exec_always "xrandr --output DVI-0 --auto --right-of DVI-1 --rotate left"
@@ -177,6 +190,9 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # start dropbox
 exec --no-startup-id dropbox start
+
+# start polybar
+exec_always --no-startup-id ~/Dropbox/config/polybar.sh
 
 # set bg color
 exec --no-startup-id xsetroot -solid "#212F3C"
