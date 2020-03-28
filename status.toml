@@ -3,8 +3,9 @@ icons = "awesome"
 
 [[block]]
 block = "music"
-buttons = ["play", "next"]
+buttons = ["prev", "play", "next"]
 max_width = 45
+min_width = 25
 
 [[block]]
 block = "sound"
