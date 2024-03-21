@@ -9,6 +9,7 @@ set hlsearch
 set ruler
 set nocompatible
 set nofixendofline
+set noswapfile
 
 set clipboard=unnamed
 set laststatus=2
